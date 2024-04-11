@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  user-select: none;
+  transition: .3s ease all;
+}
+
+:root {
+  --main: rgba(255, 255, 255, 1);
+  --txt: rgba(0, 19, 39, 1);
+  --borderBottom: rgba(0, 157, 255, 1);
+  --heading: rgba(0, 157, 255, 1);
+  --nameSpanColor: rgba(255, 162, 0, 1);
+  --txt2: rgba(0, 157, 255, 1);
+  --formColor: rgba(255, 0, 242, 1);
+  ;
+  --footerColor: black;
+}
+
+:root .dark {
+  --main: rgba(0, 19, 39, 1);
+  --txt: rgba(77, 255, 145, 1);
+  --borderBottom: rgba(255, 162, 0, 1);
+  --heading: rgba(255, 162, 0, 1);
+  --nameSpanColor: rgba(255, 0, 242, 1);
+  --txt2: rgba(0, 204, 255, 1);
+  --formColor: rgba(77, 255, 145, 1);
+  --footerColor: white;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: var(--main);
+}
+
+;
+
+nav {
+  height: 6rem;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--borderBottom);
+}
+
+.heading {
+  margin: 10px auto 10px 8px;
+  font-weight: bolder;
+  color: var(--heading);
+  width: 80%;
+}
+
+.review {
+  margin: 10px;
+  border: 2px dashed var(--heading);
+  padding: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: normal;
+  color: var(--heading);
+}
+
+.themeToggoler {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  margin: 10px;
+  background-image: url(moon-fill.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px;
+  background-color: transparent;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 0px;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.name {
+  font-size: 35px;
+  color: var(--txt2);
+  padding: 5px;
+  font-weight: bolder;
+  margin: 0;
+  text-align: left;
+  line-height: 25px;
+  padding: 10px;
+
+  animation-name: nameSlide;
+  animation-duration: 1.5s;
+}
+
+.nameSpan {
+  font-size: 22px;
+  color: var(--nameSpanColor);
+}
+
+.des {
+  padding: 10px;
+  font-size: 16px;
+  color: var(--txt);
+  animation-name: desSlide;
+  animation-duration: 1.5s;
+}
+
+.getStart {
+
+  height: 2.5rem;
+  width: 8.2rem;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--borderBottom);
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  font-weight: bolder;
+  margin: 10px auto;
+  padding: 6px 5px;
+  animation-name: startSlide;
+  animation-duration: 1.5s;
+}
+
+.asideRobot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: imageSlide;
+  animation-duration: 1.5s;
+}
+
+.robot {
+  width: 250px;
+  margin: 25px auto;
+}
+
+@keyframes nameSlide {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes desSlide {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes imageSlide {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes startSlide {
+  from {
+    transform: translateY(200%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 90vh;
+}
+
+.Reviewnav {
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--formColor);
+}
+
+.Reviewheading {
+  margin: 10px auto 10px 8px;
+  font-weight: bolder;
+  color: var(--formColor);
+  width: 80%;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+  width: 250px;
+}
+
+.reviewHeading {
+  color: var(--formColor);
+  margin: 15px;
+}
+
+.email,
+.Username,
+.number {
+  height: 2.5rem;
+  width: 100%;
+  margin: 8px;
+  padding: 3px 3px 3px 8px;
+  font-size: 15px;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--formColor);
+  color: var(--formColor);
+}
+
+.area {
+  height: 5rem;
+  width: 100%;
+  margin: 8px;
+  padding: 8px;
+  font-size: 15px;
+  outline: none;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--formColor);
+  color: var(--formColor);
+}
+
+.captcha {
+  width: 4rem;
+}
+
+.reviewBtn {
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px auto;
+  height: 2rem;
+  color: #000;
+  background-color: var(--formColor);
+  border: none;
+  border-radius: 5px;
+}
+
+.sendImg {
+  width: 22px;
+  padding: 3px;
+}
+
+.email,
+.number {
+  animation-name: leftSlide;
+  animation-duration: 2s;
+}
+
+.Username,
+.area {
+  animation-name: rightSlide;
+  animation-duration: 2s;
+}
+
+.reviewHeading {
+  animation-name: UpperSlide;
+  animation-duration: 2s;
+}
+
+.reviewBtn {
+  animation-name: BottomSlide;
+  animation-duration: 2s;
+}
+
+@keyframes leftSlide {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes rightSlide {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes UpperSlide {
+  from {
+    transform: translateY(-700%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes BottomSlide {
+  from {
+    transform: translateY(700%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+footer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid var(--borderBottom);
+  margin-top: 15px;
+}
+
+.footerDescription {
+  color: var(--footerColor);
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}

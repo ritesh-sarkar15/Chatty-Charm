@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.jpg">
+  <script src="main.js"></script>
+  <title>Review | Chatty-Charm | STUDIO-RT</title>
+</head>
+
+<body>
+  <nav>
+    <div class="Reviewnav">
+      <h1 class="Reviewheading"> STUDIO-RT </h1>
+      <button class="themeToggoler"></button>
+    </div>
+  </nav>
+
+  <div class="form-container">
+    <h1 class="reviewHeading"> Review </h1>
+    <form action="https://api.web3forms.com/submit" method="POST" class="review-form">
+
+      <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
+      <input type="hidden" name="access_key" value="504a7a12-489f-4138-ae48-fae06bef3e28">
+
+      <!-- Optional: Subject an be prefilled using type="hidden"
+       or type="text" for normal user submitted input -->
+      <input type="hidden" name="subject" value="New Submission from Web3Forms">
+
+      <!-- Optional: From Name you want to see in the email
+       Default is "Notifications". you can overwrite here -->
+      <input type="hidden" name="from_name" value="Chatty-Charm">
+
+
+      <!-- Optional: Default replyto will be "email" field (if available)
+       you may overwrite replyto with different email here -->
+      <input type="hidden" name="replyto" value="customer@example.com">
+
+      <!-- Optional: Custom Redirection or Thank you Page
+       Make sure you add full URL including https:// -->
+      <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+      <!-- Optional: But Recommended: To Prevent SPAM Submission.
+       Make sure its hidden by default -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+      <!-- Custom Form Data: Form data you wish to receive in email. -->
+      <input type="email" name="email" required placeholder="Your E-mail" class="email">
+
+      <input type="text" name="First Name" required placeholder="Your Name" class="Username">
+
+      <input type="number" name="Phone Number" required placeholder="Your Number" class="number">
+      <textarea name="message" placeholder="Leave your honest review here..." required class="area"></textarea>
+      <!-- hCaptcha: Recommended for Advanced Spam Protection. -->
+      <div class="h-captcha" data-captcha="false" class="captcha" width="3rem"></div>
+
+      <button type="submit" class="reviewBtn">Send<img src="send-email-svgrepo-com.svg" alt="" class="sendImg"></button>
+
+    </form>
+
+  </div>
+  <!-- Required only if you are using hCaptcha or Advanced File Upload. -->
+  <script src="https://web3forms.com/client/script.js" async defer></script>
+
+</body>
+
+</html>
