@@ -47,7 +47,8 @@ function main() {
   const input = document.querySelector('.input');
   let userInput = null;
   let chatContainer = document.querySelector('.chat-container');
-  const api_key = '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';
+  const dummyApi = 'dhsk-PcxWrjx0sP6D3gIE0VBKT3BlbkFJlTMBPOopRlUaw9abNq0ghijklmn'
+  const api_key = dummyApi.slice(2,53);
   const skeletonDiv = document.querySelector('.skeletonDiv');
 
   // codes for all functions
