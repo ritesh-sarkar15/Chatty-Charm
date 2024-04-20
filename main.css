@@ -344,3 +344,11 @@ nav {
   width: 28px;
   height: 28px;
 }
+
+.input:valid{
+  width: 19rem;
+}
+
+.input:valid ~ .delete-button{
+  display: none;
+}
